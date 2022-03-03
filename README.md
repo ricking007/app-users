@@ -12,14 +12,14 @@ Execute os comandos padrões para o funcionamento do projeto.
 
 ### Versão do framework
 
-Angular CLI: 13.0.4
-Node: 16.13.0
-Package Manager: npm 8.1.0
-@angular-devkit/architect       0.1300.4
-@angular-devkit/build-angular   13.0.4
-@angular-devkit/core            13.0.4
-@angular-devkit/schematics      13.0.4
-@angular/cli                    13.0.4
-@schematics/angular             13.0.4
-rxjs                            7.4.0
-typescript                      4.4.4
+Angular CLI: 13.0.4.
+Node: 16.13.0.
+Package Manager: npm 8.1.0.
+@angular-devkit/architect       0.1300.4.
+@angular-devkit/build-angular   13.0.4.
+@angular-devkit/core            13.0.4.
+@angular-devkit/schematics      13.0.4.
+@angular/cli                    13.0.4.
+@schematics/angular             13.0.4.
+rxjs                            7.4.0.
+typescript                      4.4.4.
