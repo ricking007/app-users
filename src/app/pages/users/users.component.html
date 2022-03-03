@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h1>Users</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <ng-container>
+                <div class="input-group">
+                    <input autocomplete="off" placeholder="username, name or email..." type="text" class="form-control text-dark" [(ngModel)]="query" />
+                    <span class="input-group-append">
+                <button type="button" (click)="getSearch()" class="btn btn-outline-dark">
+                  <span *ngIf="this.searching" class="spinner-border spinner-border-sm"></span>
+                    <fa-icon *ngIf="!this.searching" [icon]="icon"></fa-icon>
+                    </button>
+                    </span>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="row" *ngIf="rows.length > 0">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Date register</th>
+                    <th class="text-center">Is enabled</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor='let row of rows, let i = index'>
+                    <tr [ngClass]="{'bg-success text-white': row.is_enabled}">
+                        <td>{{row.id}}</td>
+                        <td>{{row.name}}</td>
+                        <td>{{row.surname}}</td>
+                        <td>{{row.username}}</td>
+                        <td>{{row.email}}</td>
+                        <td>{{row.phone}}</td>
+                        <td>{{row.register_date | date: 'dd/MM/yyyy'}}</td>
+                        <td class="text-center">{{row.is_enabled ? 'YES' : 'NO'}}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>
